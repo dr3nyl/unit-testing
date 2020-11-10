@@ -37,6 +37,6 @@ class BookReservationTest extends TestCase
     
     $response->assertSessionHasErrors('title');
     
-}
+    }
 
 }
