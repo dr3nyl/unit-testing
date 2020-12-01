@@ -9,6 +9,7 @@ use App\Book;
 class BookReservationTest extends TestCase
 {
     use RefreshDatabase;
+    private $expected_var = "Si Dre ay good boy";
     
    /** @test */
    public function a_book_can_be_added_to_the_library(){
@@ -35,8 +36,10 @@ class BookReservationTest extends TestCase
         'author' => 'Victor'
     ]);
     
-    $response->assertSessionHasErrors('title');
+    // $response->assertSessionHasErrors('title');
     
+    $this->assertEquals($this->expected_var, 'Si Dre ay good boy');
+
     }
 
 }
